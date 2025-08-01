@@ -21,8 +21,8 @@ jobs:
       - name: Deploy to Azure Container App
         uses: azure/container-apps-deploy-action@v2
         with:
-          resourceGroup: <your-resource-group>
-          name: <your-container-app-name>
+          resourceGroup: Dev-App
+          name: Mobile-APP
           imageToBuild: ghcr.io/${{ github.repository }}:latest
           registryUrl: ghcr.io
-          containerAppEnvironment: <your-env-name>
+          containerAppEnvironment: Dev-App-Env
