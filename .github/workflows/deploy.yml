@@ -23,6 +23,6 @@ jobs:
         with:
           resourceGroup: Dev-App
           name: Mobile-APP
-          imageToBuild: ghcr.io/${{ github.repository }}:latest
+          imageToDeploy: ghcr.io/${{ github.repository }}:latest
           registryUrl: ghcr.io
           containerAppEnvironment: Dev-App-Env
