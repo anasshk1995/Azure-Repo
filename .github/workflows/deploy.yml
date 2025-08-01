@@ -30,14 +30,14 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/anasshk1995/azure-repo:latest  # ✅ lowercase only
 
       - name: Deploy to Azure Container App
         uses: azure/container-apps-deploy-action@v2
         with:
           resourceGroup: Dev-App
           containerAppName: Mobile-APP
-          imageToDeploy: ghcr.io/${{ github.repository }}:latest
+          imageToDeploy: ghcr.io/anasshk1995/azure-repo:latest  # ✅ match above tag
           registryUrl: ghcr.io
           registryUsername: ${{ github.actor }}
           registryPassword: ${{ secrets.GITHUB_TOKEN }}
